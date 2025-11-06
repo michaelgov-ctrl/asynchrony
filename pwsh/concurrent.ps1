@@ -26,4 +26,5 @@ Start-ThreadJob -ScriptBlock {
 [Client]::new().Connect()
 
 # This example exhibits asynchrony because it doesn't matter whether the listener
-# accepts or the client reaches out first, however there is a dependency on concurrency.
+# accepts or the client reaches out first.
+# -- There is asynchrony with a dependency on concurrency.
