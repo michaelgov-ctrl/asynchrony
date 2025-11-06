@@ -7,7 +7,8 @@ $utils = (Resolve-Path -Path ".\utils.ps1").ProviderPath
     Writing FileA and FileB is asynchronous, their relative order doesn’t matter
     for correctness.
     They can be executed serially, or at the same time, in any order and all
-    outcomes are still correct. Asynchrony does not require concurrency.
+    outcomes are still correct.
+    -- Asynchrony does not require concurrency.
 #>
 
 # serial
