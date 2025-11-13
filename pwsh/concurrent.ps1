@@ -2,7 +2,6 @@
 $classes = (Resolve-Path -Path ".\tcp.ps1").ProviderPath
 . $classes
 
-
 # With a listener and a client in the same process, the two
 # must overlap, so there is a requirement of concurrency.
 
@@ -12,7 +11,8 @@ $client = [Client]::new()
 # This can not be run serially because it will
 # deadlock on Accept forever and the client never runs
 $listener.Accept()
-$client.Connect()
+$client.Connect() # unreachable
+
 
 
 # Since concurrency is required for this workflow to function.
